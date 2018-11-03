@@ -15,7 +15,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -39,7 +39,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -63,7 +63,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -95,7 +95,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 8 is not between 0 and 7
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -123,7 +123,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -155,7 +155,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 8 is not between 0 and 7
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -179,7 +179,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -207,7 +207,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -231,7 +231,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -259,7 +259,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -279,7 +279,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 2 is not between 0 and 1
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)
@@ -324,7 +324,7 @@ Your Output:
 Exception in thread "main" java.lang.IllegalArgumentException: vertex 12 is not between 0 and 11
 	at Digraph.validateVertex(Digraph.java:156)
 	at Digraph.outdegree(Digraph.java:195)
-	at PageRank.getPr(Solution.java:17)
+	at PageRank.getPr(Solution.java:18)
 	at PageRank.toString(Solution.java:32)
 	at java.base/java.lang.String.valueOf(String.java:2788)
 	at java.base/java.io.PrintStream.println(PrintStream.java:897)

@@ -14,10 +14,10 @@ class PageRank {
 		double pr = p[v];
 		int m = 500;
 		for(int j = 0; j < m; j++) {
-			if (d.outdegree(j) == 0 && d.indegree(j) == 0) {
-				pr = 0;
-			} else {
-				for (int i: d.adj(v)) {
+			for (int i: d.adj(v)) {
+				if (d.outdegree(j) == 0 && d.indegree(j) == 0) {
+					pr = 0;
+				} else {
 					pr = pr / d.outdegree(i);
 				}
 			}
