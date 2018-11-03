@@ -12,16 +12,14 @@ Expected Output:
 3 - 0.0
 
 Your Output: 
-4 vertices, 5 edges 
-0: 2 1 
-1: 2 
-2: 0 
-3: 2 
-
-0 - 0.25
-1 - 0.25
-2 - 7.637340908749012E-152
-3 - 0.25
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -38,16 +36,14 @@ Expected Output:
 3 - 0.09090909090909086
 
 Your Output: 
-4 vertices, 6 edges 
-0: 1 
-1: 2 0 
-2: 3 0 
-3: 0 
-
-0 - 7.637340908749012E-152
-1 - 7.637340908749012E-152
-2 - 0.25
-3 - 0.25
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -64,16 +60,14 @@ Expected Output:
 3 - 0.07692307692307687
 
 Your Output: 
-4 vertices, 8 edges 
-0: 1 
-1: 2 0 
-2: 3 1 0 
-3: 2 0 
-
-0 - 7.637340908749012E-152
-1 - 6.875632390507851E-240
-2 - 2.3331590462580472E-302
-3 - 6.875632390507851E-240
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -98,24 +92,14 @@ Expected Output:
 7 - 0.02941176470588232
 
 Your Output: 
-8 vertices, 14 edges 
-0: 3 2 1 
-1: 0 
-2: 0 
-3: 7 6 5 4 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-
-0 - 0.0
-1 - 3.4378161952539256E-240
-2 - 3.4378161952539256E-240
-3 - 3.4378161952539256E-240
-4 - 3.4378161952539256E-240
-5 - 3.4378161952539256E-240
-6 - 3.4378161952539256E-240
-7 - 3.4378161952539256E-240
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 8 is not between 0 and 7
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -136,20 +120,14 @@ Expected Output:
 5 - 0.07936507936507975
 
 Your Output: 
-6 vertices, 8 edges 
-0: 3 2 1 
-1: 0 
-2: 0 
-3: 5 0 
-4: 0 
-5: 
-
-0 - 5.091560605832674E-152
-1 - 4.583754927005234E-240
-2 - 4.583754927005234E-240
-3 - Infinity
-4 - 4.583754927005234E-240
-5 - 0.16666666666666666
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -174,27 +152,17 @@ Expected Output:
 7 - 0.051470588235294074
 
 Your Output: 
-8 vertices, 10 edges 
-0: 3 2 1 
-1: 0 
-2: 0 
-3: 7 6 5 4 0 
-4: 
-5: 
-6: 
-7: 
-
-0 - 0.0
-1 - 3.4378161952539256E-240
-2 - 3.4378161952539256E-240
-3 - Infinity
-4 - 0.125
-5 - 0.125
-6 - 0.125
-7 - 0.125
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 8 is not between 0 and 7
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
-########## Testcase 6: Passed ##########
+########## Testcase 6: Failed ##########
 Expected Output: 
 4 vertices, 4 edges 
 0: 1 
@@ -208,16 +176,14 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4 vertices, 4 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 0 
-
-0 - 0.25
-1 - 0.25
-2 - 0.25
-3 - 0.25
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -238,20 +204,14 @@ Expected Output:
 5 - 0.12499999999999999
 
 Your Output: 
-6 vertices, 6 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 5 0 
-4: 0 
-5: 
-
-0 - 0.16666666666666666
-1 - 0.16666666666666666
-2 - 5.091560605832674E-152
-3 - Infinity
-4 - 0.16666666666666666
-5 - 0.16666666666666666
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -268,16 +228,14 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4 vertices, 12 edges 
-0: 3 2 1 
-1: 3 2 0 
-2: 3 1 0 
-3: 2 1 0 
-
-0 - 0.0
-1 - 0.0
-2 - 0.0
-3 - 0.0
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 4 is not between 0 and 3
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -298,23 +256,17 @@ Expected Output:
 5 - 0.060240963855421686
 
 Your Output: 
-6 vertices, 14 edges 
-0: 3 2 1 
-1: 3 2 0 
-2: 5 3 1 0 
-3: 2 1 0 
-4: 0 
-5: 
-
-0 - 0.0
-1 - 0.0
-2 - Infinity
-3 - 0.0
-4 - 4.583754927005234E-240
-5 - 0.16666666666666666
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 6 is not between 0 and 5
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
-########## Testcase 10: Passed ##########
+########## Testcase 10: Failed ##########
 Expected Output: 
 2 vertices, 2 edges 
 0: 1 
@@ -324,12 +276,14 @@ Expected Output:
 1 - 0.5
 
 Your Output: 
-2 vertices, 2 edges 
-0: 1 
-1: 0 
-
-0 - 0.5
-1 - 0.5
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 2 is not between 0 and 1
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -367,31 +321,13 @@ Expected Output:
 0
 
 Your Output: 
-12 vertices, 22 edges 
-0: 3 2 1 
-1: 0 
-2: 0 
-3: 11 10 9 8 7 6 5 4 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-0 - 0.0
-1 - 2.291877463502617E-240
-2 - 2.291877463502617E-240
-3 - 2.291877463502617E-240
-4 - 2.291877463502617E-240
-5 - 2.291877463502617E-240
-6 - 2.291877463502617E-240
-7 - 2.291877463502617E-240
-8 - 2.291877463502617E-240
-9 - 2.291877463502617E-240
-10 - 2.291877463502617E-240
-11 - 2.291877463502617E-240
+Exception in thread "main" java.lang.IllegalArgumentException: vertex 12 is not between 0 and 11
+	at Digraph.validateVertex(Digraph.java:156)
+	at Digraph.outdegree(Digraph.java:195)
+	at PageRank.getPr(Solution.java:17)
+	at PageRank.toString(Solution.java:32)
+	at java.base/java.lang.String.valueOf(String.java:2788)
+	at java.base/java.io.PrintStream.println(PrintStream.java:897)
+	at Solution.main(Solution.java:63)
 ----------------------------------------
 
