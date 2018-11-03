@@ -19,7 +19,14 @@ class PageRank {
 	}
 		return pr;
 	}
-	
+	public String toString() {
+		String str = "";
+		str += d;
+		for (int i = 0; i < d.V(); i++) {
+			str += i + " - " + getPr(i) + "\n";
+		}
+		return str;
+	}
 
 }
 
