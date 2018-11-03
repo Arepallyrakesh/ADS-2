@@ -11,7 +11,7 @@ class PageRank {
 	}
 	double getPr(int v) {
 		double pr = p[v];
-		int m = Integer.MAX_VALUE;
+		int m = 500;
 		for(int j = 0; j < m; j++) {
 		for (int i: d.adj(v)) {
 			pr = pr / d.outdegree(i);

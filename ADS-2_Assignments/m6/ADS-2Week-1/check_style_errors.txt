@@ -294,6 +294,7 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:5:18: Parameter graph should be final. [FinalParameters]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:12:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:12:22: Parameter v should be final. [FinalParameters]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:14:25: '500' is a magic number. [MagicNumber]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:15:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:22:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:33: Missing a Javadoc comment. [JavadocType]
@@ -307,7 +308,7 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:56: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:65: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 24 errors.
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
