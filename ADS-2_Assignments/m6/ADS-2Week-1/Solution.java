@@ -53,7 +53,8 @@ public class Solution {
 		// Create page rank object and pass the graph object to the constructor
 		PageRank pr = new PageRank(graph);
 		// print the page rank object
-	/*	System.out.println(pr);*/
+		
+		System.out.println(graph);
 
 		// This part is only for the final test case
 

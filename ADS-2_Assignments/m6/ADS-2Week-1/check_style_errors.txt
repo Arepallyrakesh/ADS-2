@@ -304,9 +304,10 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:40: Line is longer than 80 characters (found 81). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:50: Line is longer than 80 characters (found 94). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:53: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:64: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:56: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Solution.java:65: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 23 errors.
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
