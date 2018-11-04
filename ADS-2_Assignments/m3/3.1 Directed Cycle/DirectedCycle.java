@@ -1,84 +1,88 @@
-class DirectedCycle {
-    private boolean[] marked;        // marked[v] = has vertex v been marked?
-    private int[] edgeTo;            // edgeTo[v] = previous vertex on path to v
-    private boolean[] onStack;       // onStack[v] = is vertex on the stack?
-    private Stack<Integer> cycle;    // directed cycle (or null if no such cycle)
+/**
+ * Class for directed cycle.
+ */
+public class DirectedCycle {
+    /**
+     * { var_description }.
+     */
+    private boolean[] marked;
+    /**
+     * { var_description }.
+     */
+    private int[] edgeTo;
+    /**
+     * { var_description }.
+     */
+    private boolean[] onStack;
+    /**
+     * { var_description }.
+     */
+    private Stack<Integer> cycle;
 
     /**
-     * Determines whether the digraph {@code G} has a directed cycle and, if so,
+     * Determines whether the digraph {@code G} has a directed cycle and, if so
      * finds such a cycle.
-     * @param G the digraph
+     * @param graph the digraph
      */
-    public DirectedCycle(Digraph G) {
-        marked  = new boolean[G.V()];
-        onStack = new boolean[G.V()];
-        edgeTo  = new int[G.V()];
-        for (int v = 0; v < G.V(); v++)
-            if (!marked[v] && cycle == null) dfs(G, v);
+    public DirectedCycle(final Digraph graph) {
+        marked  = new boolean[graph.vertices()];
+        onStack = new boolean[graph.vertices()];
+        edgeTo  = new int[graph.vertices()];
+        for (int v = 0; v < graph.vertices(); v++) {
+            if (!marked[v] && cycle == null) {
+                dfs(graph, v);
+            }
+        }
     }
-
-    // check that algorithm computes either the topological order or finds a directed cycle
-    private void dfs(Digraph G, int v) {
+    /**
+     * { function_description }.
+     *
+     * @param      graph     { parameter_description }
+     * @param      v     { parameter_description }
+     */
+    private void dfs(final Digraph graph, final int v) {
         onStack[v] = true;
         marked[v] = true;
-        for (int w : G.adj(v)) {
+        for (int w : graph.adj(v)) {
 
             // short circuit if directed cycle found
-            if (cycle != null) return;
-
-            // found new vertex, so recur
-            else if (!marked[w]) {
+            if (cycle != null) {
+                return;
+            } else if (!marked[w]) {
                 edgeTo[w] = v;
-                dfs(G, w);
-            }
-
-            // trace back directed cycle
-            else if (onStack[w]) {
+                dfs(graph, w);
+            } else if (onStack[w]) {
                 cycle = new Stack<Integer>();
                 for (int x = v; x != w; x = edgeTo[x]) {
                     cycle.push(x);
                 }
                 cycle.push(w);
                 cycle.push(v);
-                assert check();
+
             }
         }
         onStack[v] = false;
     }
-
     /**
-     * Does the digraph have a directed cycle?
-     * @return {@code true} if the digraph has a directed cycle, {@code false} otherwise
+     * Determines if it has cycle.
+     *
+     * @return     True if has cycle, False otherwise.
      */
     public boolean hasCycle() {
         return cycle != null;
     }
 
     /**
-     * Returns a directed cycle if the digraph has a directed cycle, and {@code null} otherwise.
-     * @return a directed cycle (as an iterable) if the digraph has a directed cycle,
-     *    and {@code null} otherwise
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
      */
-    public Iterable<Integer> cycle() {
-        return cycle;
-    }
-
-
-    // certify that digraph has a directed cycle if it reports one
-    private boolean check() {
-
+    public String toString() {
         if (hasCycle()) {
-            // verify cycle
-            int first = -1, last = -1;
-            for (int v : cycle()) {
-                if (first == -1) first = v;
-                last = v;
-            }
-            if (first != last) {
-                System.err.printf("Cycle doesn't exist");
-                return false;
-            }
+            return "Cycle exists.";
+        } else {
+            return "Cycle doesn't exists.";
         }
-        return true;
+
     }
 }
