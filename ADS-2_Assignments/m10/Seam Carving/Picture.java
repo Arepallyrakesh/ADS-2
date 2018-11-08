@@ -160,7 +160,7 @@ public final class Picture implements ActionListener {
 
             width  = image.getWidth(null);
             height = image.getHeight(null);
-            System.out.println("");
+            
         }
         catch (IOException ioe) {
             throw new IllegalArgumentException("could not open image file: " + filename, ioe);
