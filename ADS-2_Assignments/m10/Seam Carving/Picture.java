@@ -383,7 +383,7 @@ public final class Picture implements ActionListener {
                 else                   rgb = image.getRGB(col, height - row - 1);
                 sb.append(String.format("#%06X ", rgb & 0xFFFFFF));
             }
-            /*sb.append("\n");*/
+            sb.append("\n");
         }
         return sb.toString().trim();
     }
