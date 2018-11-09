@@ -1,4 +1,5 @@
 import java.util.*;
+import java.awt.Color;
 public class SeamCarver {
 	Picture picture;
 	int h;
@@ -22,16 +23,20 @@ public class SeamCarver {
 
 	}
 	public int  xenergy(int x, int y){
-		int blue = getblue(x,y+1) - getblue(x,y-1);
-		int red = getred(x,y+1) - getred(x,y-1);
-		int green = getgreen(x,y+1) - getgreen(x,y-1);
-		return blue^2 + red^2 + green^2;
+		Color a = picture.get(x-1, y);
+		Color b = picture.get(x+1, y);
+		int red = b.getRed() - a.getRed();
+		int blue = b.getBlue() - a.getBlue();
+		int green = b.getGreen() - a.getGreen();
+		return (red*red + green* green + blue*blue);
 	}	
 	public int yenergy(int x, int y){
-		int blue = getblue(x+1,y) - getblue(x-1,y);
-		int red = getred(x+1,y) - getred(x-1,y);
-		int green = getgreen(x+1,y) - getgreen(x-1,y);
-		return blue^2 + red^2 + green^2;
+		Color a = picture.get(y-1, x);
+		Color b = picture.get(y+1, x);
+		int red = b.getRed() - a.getRed();
+		int blue = b.getBlue() - a.getBlue();
+		int green = b.getGreen() - a.getGreen();
+		return (red*red + green* green + blue*blue);
 	}
 	// current picture
 	public Picture picture() {
@@ -71,7 +76,7 @@ public class SeamCarver {
 	public void removeVerticalSeam(int[] seam) {
 
 	}
-	public int getblue(int x, int y) {
+	/*public int getblue(int x, int y) {
 		return picture.get(x, y).getBlue();
 	}
 	public int getred(int x, int y) {
@@ -79,5 +84,5 @@ public class SeamCarver {
 	}
 	public int getgreen(int x, int y) {
 		return picture.get(x, y).getGreen();
-	}
+	}*/
 }
