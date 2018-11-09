@@ -32,12 +32,13 @@ public class SeamCarver {
 
 	}	
 	public int yenergy(int x, int y){
-		Color a = picture.get(y-1, x);
-		Color b = picture.get(y+1, x);
+		Color a = picture.get(x, y-1);
+		Color b = picture.get(x, y+1);
 		int red = b.getRed() - a.getRed();
 		int blue = b.getBlue() - a.getBlue();
 		int green = b.getGreen() - a.getGreen();
 		return ((red*red) + (green* green) + (blue*blue));
+
 	}
 	// current picture
 	public Picture picture() {
