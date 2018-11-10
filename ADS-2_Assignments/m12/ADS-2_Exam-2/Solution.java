@@ -27,16 +27,15 @@ public class Solution {
 			// Other wise print "No Path Found."
 			String[] token1 = sc.nextLine().split(" ");
 			boolean flag = true;
-			for (int k = 0; k <token1.length; k++) {
+			
             DijkstraUndirectedSP dsp = new DijkstraUndirectedSP(graph,Integer.parseInt(token1[0]));
-             if (dsp.hasPathTo((Integer.parseInt(token1[k])))== false) {
-             	System.out.println("No Path Found.");
-             	break;
-             	}else{
-             		System.out.println(dsp.distTo(Integer.parseInt(token1[k])));
-             	}
-        }
+            if (dsp.hasPathTo(Integer.parseInt(token1[1]))) {
+				System.out.println(dsp.distTo(Integer.parseInt(token1[1])));
+			} else {
+				System.out.println("No Path Found.");
+			}
 			break;
+			
 
 		case "ViaPaths":
 			// Handle the case of ViaPaths, where three integers are given.
