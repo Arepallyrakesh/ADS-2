@@ -398,13 +398,13 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:12:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:14: Line is longer than 80 characters (found 137). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:24: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:30: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:30:71: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:63: '==' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:63: Expression can be simplified. [SimplifyBooleanExpression]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:34: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:40: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:41: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:30: Line is longer than 80 characters (found 101). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:30:72: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:67: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:67: Expression can be simplified. [SimplifyBooleanExpression]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:35: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:41: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:42: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
 Checkstyle ends with 17 errors.
 Starting audit...

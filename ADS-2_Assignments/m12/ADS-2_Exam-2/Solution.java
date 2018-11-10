@@ -27,12 +27,13 @@ public class Solution {
 			// Other wise print "No Path Found."
 			String[] tokens1 = sc.nextLine().split(" ");
 			for (int k = 0; k < tokens1.length; k++) {
-            DijkstraUndirectedSP dsp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
+            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
 
-             if (dsp.hasPathTo((Integer.parseInt(tokens1[k])))== false) {
+            	if (dusp.hasPathTo((Integer.parseInt(tokens1[k])))== false) {
              	System.out.println("No Path Found.");
-             	
-             }
+            	} else {
+            		System.out.println(dusp.distTo(Integer.parseInt(tokens1[k])));
+            	}
         }
 			break;
 
