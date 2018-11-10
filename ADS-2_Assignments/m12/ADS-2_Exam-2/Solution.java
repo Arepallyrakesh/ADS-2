@@ -30,7 +30,7 @@ public class Solution {
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
 
             	if (dusp.hasPathTo((Integer.parseInt(tokens1[k])))== false) {
-             	System.out.println("No Path Found.");
+             		System.out.println("No Path Found.");
             	} else {
             		System.out.println(dusp.distTo(Integer.parseInt(tokens1[k])));
             	}
