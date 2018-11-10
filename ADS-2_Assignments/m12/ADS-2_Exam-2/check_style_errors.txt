@@ -251,9 +251,9 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:4:33: Parameter args should be final. [FinalParameters]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:12:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:14: Line is longer than 80 characters (found 137). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:23: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:30: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:31: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:24: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:31: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
 Checkstyle ends with 12 errors.
 Starting audit...
