@@ -26,8 +26,8 @@ public class Solution {
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 			String[] tokens1 = sc.nextLine().split(" ");
-			for (int k = 0; k < tokens1.length; k++) {
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
+			for (int k = 0; k < tokens1.length; k++) {
 
             	if (dusp.hasPathTo((Integer.parseInt(tokens1[k])))== false) {
              		System.out.println("No Path Found.");
