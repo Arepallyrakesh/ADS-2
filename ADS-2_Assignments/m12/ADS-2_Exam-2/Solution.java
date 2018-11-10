@@ -13,7 +13,7 @@ public class Solution {
 			String[] tokens = sc.nextLine().split(" ");
 			graph.addEdge(new Edge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
 		}
-		String caseToGo = null;
+		String caseToGo = sc.nextLine();
 		switch (caseToGo) {
 		case "Graph":
 			//Print the Graph Object.
