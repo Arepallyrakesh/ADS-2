@@ -25,17 +25,16 @@ public class Solution {
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
-			String[] tokens1 = sc.nextLine().split(" ");
-            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
-			for (int k = 0; k < tokens1.length; k++) {
-
-            	if (dusp.hasPathTo((Integer.parseInt(tokens1[k]))) == false) {
-             		System.out.println("No Path Found.");
-             		break;
-            	} else {
-
-            		System.out.println(dusp.distTo(Integer.parseInt(tokens1[k])));
-            	}
+			String[] token1 = sc.nextLine().split(" ");
+			boolean flag = true;
+			for (int k = 0; k <token1.length; k++) {
+            DijkstraUndirectedSP dsp = new DijkstraUndirectedSP(graph,Integer.parseInt(token1[0]));
+             if (dsp.hasPathTo((Integer.parseInt(token1[k])))== false) {
+             	System.out.println("No Path Found.");
+             	break;
+             	}else{
+             		System.out.println(dsp.distTo(Integer.parseInt(token1[k])));
+             	}
         }
 			break;
 
