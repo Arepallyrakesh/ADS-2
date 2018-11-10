@@ -9,8 +9,10 @@ public class Solution {
 		int vertices = Integer.parseInt(sc.nextLine());
 		int lines = Integer.parseInt(sc.nextLine());
 		EdgeWeightedGraph graph = new EdgeWeightedGraph(vertices);
+		//EdgeWeightedDigraph egraph = new EdgeWeightedDigraph(vertices);
 		for(int i = 0; i < lines; i++) {
 			String[] tokens = sc.nextLine().split(" ");
+			//egraph.addEdge(new DirectedEdge(Integer.parseInt(tokens[0]),Integer.parseInt(tokens[1]),Double.parseDouble(tokens[2])));
 			graph.addEdge(new Edge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]), Double.parseDouble(tokens[2])));
 		}
 		String caseToGo = sc.nextLine();
@@ -43,6 +45,11 @@ public class Solution {
 			// third is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
+			// tokens = sc.nextLine().split(" ");
+			
+				System.out.println("No Path Found.");
+						
+			
 			break;
 
 		default:
