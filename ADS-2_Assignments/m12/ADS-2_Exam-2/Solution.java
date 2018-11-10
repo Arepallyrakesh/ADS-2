@@ -29,9 +29,11 @@ public class Solution {
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(graph,Integer.parseInt(tokens1[0]));
 			for (int k = 0; k < tokens1.length; k++) {
 
-            	if (dusp.hasPathTo((Integer.parseInt(tokens1[k])))== false) {
+            	if (dusp.hasPathTo((Integer.parseInt(tokens1[k]))) == false) {
              		System.out.println("No Path Found.");
+             		break;
             	} else {
+
             		System.out.println(dusp.distTo(Integer.parseInt(tokens1[k])));
             	}
         }

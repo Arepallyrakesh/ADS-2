@@ -400,13 +400,12 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:24: Line is longer than 80 characters (found 90). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:29: Line is longer than 80 characters (found 101). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:29:72: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:67: '==' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:67: Expression can be simplified. [SimplifyBooleanExpression]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:35: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:41: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:42: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:32:68: Expression can be simplified. [SimplifyBooleanExpression]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:37: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:43: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Solution.java:44: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 16 errors.
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Stack.java:6: Line is longer than 80 characters (found 89). [LineLength]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m12\ADS-2_Exam-2\Stack.java:7: Line is longer than 80 characters (found 87). [LineLength]
