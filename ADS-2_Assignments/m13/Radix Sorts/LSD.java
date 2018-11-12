@@ -19,7 +19,7 @@ class LSD {
 
    /**
      * Rearranges the array of W-character strings in ascending order.
-     *
+     * complexity O(2W(N + R))
      * @param      a     the array to be sorted
      * @param      w     the number of characters per string
      *
@@ -63,7 +63,7 @@ class LSD {
 
     /**
      * { function_description }.
-     *
+     *  complexity O(2W(N + R))
      * @param      a     { parameter_description }
      */
     public static void sort(final int[] a) {
