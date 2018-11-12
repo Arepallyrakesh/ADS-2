@@ -13,7 +13,7 @@ class Solution {
 			s[i] = sc.nextLine();
 			w = s[i].length();
 		}
-		 s = lsd.sort(s, w);
-		System.out.println(Arrays.toString(s));
+		 String[]  a = lsd.sort(s, w);
+		System.out.println(Arrays.toString(a));
 	}
 }
