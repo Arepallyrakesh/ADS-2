@@ -3,15 +3,16 @@
  */
 class LSD {
     /**
+     * Constructs the object.
+     */
+    protected LSD() {
+
+    }
+    /**
      * private bits.
      */
     private static final int BITS_PER_BYTE = 8;
-    /**
-     * Constructs the object.
-     */
-    public LSD() {
-
-    }
+    
     /**
      * tfs.
      */
