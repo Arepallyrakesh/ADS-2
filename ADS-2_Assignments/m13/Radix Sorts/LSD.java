@@ -1,7 +1,7 @@
 /**
  * Class for lsd.
  */
-public final class LSD {
+class LSD {
     /**
      * private bits.
      */
@@ -70,11 +70,11 @@ public final class LSD {
         int n = a.length;
         int[] aux = new int[n];
 
-        for (int d = 0; d < w; d++) {         
+        for (int d = 0; d < w; d++) {
 
             // compute frequency counts
             int[] count = new int[ra + 1];
-            for (int i = 0; i < n; i++) {           
+            for (int i = 0; i < n; i++) {
                 int c = (a[i] >> BITS_PER_BYTE * d) & MA_SK;
                 count[c + 1]++;
             }
@@ -103,8 +103,9 @@ public final class LSD {
             }
 
             // copy back
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 a[i] = aux[i];
+            }
         }
     }
 }
