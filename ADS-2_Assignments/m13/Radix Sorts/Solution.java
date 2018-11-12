@@ -11,10 +11,10 @@ class Solution {
 		LSD lsd = new LSD();
 		for (int i = 0; i < n; i++) {
 			s[i] = sc.nextLine();
-			System.out.println(s[i]);
+			
 			w = s[i].length();
 		}
-		//String[]  a = lsd.sort(s, w);
-		System.out.println(Arrays.toString(s));
+		String[]  a = lsd.sort(s, w);
+		System.out.println(Arrays.toString(a));
 	}
 }
