@@ -6,12 +6,13 @@ public class LSD {
      * private bits.
      */
     private static final int BITS_PER_BYTE = 8;
+   
+    /**
+     * Constructs the object.
+     */
+    public LSD() { 
 
-
-    //
-    // do not instantiate
-    //
-    public LSD() { }
+    }
 
    /**
      * Rearranges the array of W-character strings in ascending order.
@@ -48,14 +49,6 @@ public class LSD {
         }
         return a;
     }
-
-   /**
-     * Rearranges the array of 32-bit integers in ascending order.
-     * This is about 2-3x faster than Arrays.sort().
-     *
-     * @param a the array to be sorted
-     */
-
     /**
      * { function_description }.
      *
@@ -80,17 +73,20 @@ public class LSD {
             }
 
             // compute cumulates
-            for (int r = 0; r < R; r++)
+            for (int r = 0; r < R; r++) {
                 count[r + 1] += count[r];
+            }
 
             // for most significant byte, 0x80-0xFF comes before 0x00-0x7F
             if (d == w - 1) {
                 int shift1 = count[R] - count[R/2];
                 int shift2 = count[R/2];
-                for (int r = 0; r < R/2; r++)
+                for (int r = 0; r < R/2; r++) {
                     count[r] += shift1;
-                for (int r = R/2; r < R; r++)
+                }
+                for (int r = R/2; r < R; r++) {
                     count[r] -= shift2;
+                }
             }
 
             // move data
