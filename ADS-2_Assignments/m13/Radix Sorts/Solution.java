@@ -5,11 +5,11 @@ class Solution {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		int n = Integer.parseInt(sc.nextLine());
 		String[] s = new String[n];
 		int w = 0;
 		LSD lsd = new LSD();
-		for (int i = 0; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 			s[i] = sc.nextLine();
 			System.out.println(s[i]);
 			w = s[i].length();
