@@ -57,12 +57,17 @@ class LSD {
         return a;
     }
     /**
+     * tfs.
+     */
+    public static final int BI_TS = 32;
+
+    /**
      * { function_description }.
      *
      * @param      a     { parameter_description }
      */
     public static void sort(final int[] a) {
-        final int BI_TS = 32;                 // each int is 32 bits
+        //final int BITS = 32;                 // each int is 32 bits
         final int ra = 1 << BITS_PER_BYTE;    // each bytes is between 0 and 255
         final int MA_SK = ra - 1;              // 0xFF
         final int w = BI_TS / BITS_PER_BYTE;  // each int is 4 bytes

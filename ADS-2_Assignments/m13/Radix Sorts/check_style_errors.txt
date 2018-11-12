@@ -1,9 +1,8 @@
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:4:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:12:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:65:19: Name 'BI_TS' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:67:19: Name 'MA_SK' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:72:19: Name 'MA_SK' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 Audit done.
