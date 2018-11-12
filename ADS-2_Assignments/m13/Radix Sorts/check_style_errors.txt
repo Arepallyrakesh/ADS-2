@@ -2,8 +2,6 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:4:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:9: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:13: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:25:33: Parameter a should be final. [FinalParameters]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:25:45: Parameter w should be final. [FinalParameters]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:27:13: Name 'R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:27:17: '256' is a magic number. [MagicNumber]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:34:36: '+' is not preceded with whitespace. [WhitespaceAround]
@@ -12,7 +10,6 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:39: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:43: 'for' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:47: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:57:29: Parameter a should be final. [FinalParameters]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:58: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:58:19: Name 'BITS' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:59:19: Name 'R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
@@ -33,6 +30,6 @@ Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:87:32: '/' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m13\Radix Sorts\LSD.java:99: 'for' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 33 errors.
+Checkstyle ends with 30 errors.
 Starting audit...
 Audit done.

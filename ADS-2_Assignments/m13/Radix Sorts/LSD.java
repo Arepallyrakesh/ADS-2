@@ -1,7 +1,7 @@
 /**
  * Class for lsd.
  */
-public class LSD {
+public final class LSD {
     /**
      * private bits.
      */
@@ -22,7 +22,7 @@ public class LSD {
      *
      * @return     { description_of_the_return_value }
      */
-    public static String[] sort(String[] a, int w) {
+    public static String[] sort(final String[] a, final int w) {
         int n = a.length;
         int R = 256;   // extend ASCII alphabet size
         String[] aux = new String[n];
@@ -54,7 +54,7 @@ public class LSD {
      *
      * @param      a     { parameter_description }
      */
-    public static void sort(int[] a) {
+    public static void sort(final int[] a) {
         final int BITS = 32;                 // each int is 32 bits 
         final int R = 1 << BITS_PER_BYTE;    // each bytes is between 0 and 255
         final int MASK = R - 1;              // 0xFF
