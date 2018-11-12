@@ -9,9 +9,14 @@ public final class LSD {
     /**
      * Constructs the object.
      */
-    public LSD() { 
+    public LSD() {
 
     }
+    /**
+     * tfs.
+     */
+    public static final int tfs = 256;
+
    /**
      * Rearranges the array of W-character strings in ascending order.
      *
@@ -22,7 +27,7 @@ public final class LSD {
      */
     public static String[] sort(final String[] a, final int w) {
         int n = a.length;
-        int ra = 256;   // extend ASCII alphabet size
+        int ra = tfs;   // extend ASCII alphabet size
         String[] aux = new String[n];
 
         for (int d = w - 1; d >= 0; d--) {
@@ -30,20 +35,24 @@ public final class LSD {
 
             // compute frequency counts
             int[] count = new int[ra + 1];
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 count[a[i].charAt(d) + 1]++;
+            }
 
             // compute cumulates
-            for (int r = 0; r < ra; r++)
+            for (int r = 0; r < ra; r++) {
                 count[r + 1] += count[r];
+            }
 
             // move data
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 aux[count[a[i].charAt(d)]++] = a[i];
+            }
 
             // copy back
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) {
                 a[i] = aux[i];
+            }
         }
         return a;
     }
