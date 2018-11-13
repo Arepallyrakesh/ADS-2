@@ -3,18 +3,22 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
 	/**
 	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		String[] words = loadWords();
 		TST tst = new TST();
-		//Your code goes here...
-		//System.out.println(Arrays.toString(words));
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		for (int i = 0; i < words.length; i++) {
