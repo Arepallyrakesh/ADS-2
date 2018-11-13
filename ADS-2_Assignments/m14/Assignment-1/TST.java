@@ -1,10 +1,36 @@
+/**
+ * Class for tst.
+ *
+ * @param      <Value>  The value
+ */
 public class TST<Value> {
+    /**
+     * int .
+     */
     private int n;              // size
+    /**
+     * root.
+     */
+
     private Node<Value> root;   // root of TST
 
+    /**
+     * Class for node.
+     *
+     * @param      <Value>  The value
+     */
     private static class Node<Value> {
+        /**
+         * { var_description }
+         */
         private char c;                        // character
-        private Node<Value> left, mid, right;  // left, middle, and right subtries
+        /**
+         * { item_description }.
+         */
+        private Node<Value> left, mid, right;
+        /**
+         * { var_description }.
+         */
         private Value val;                     // value associated with string
     }
 
@@ -53,10 +79,23 @@ public class TST<Value> {
         return x.val;
     }
 
-    // return subtrie corresponding to given key
+    // return subtrie corresponding to given key.
+
+
+    /**
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node<Value> get(Node<Value> x, String key, int d) {
         if (x == null) return null;
-        if (key.length() == 0) throw new IllegalArgumentException("key must have length >= 1");
+        if (key.length() == 0) throw new
+            IllegalArgumentException
+        ("key must have length >= 1");
         char c = key.charAt(d);
         if      (c < x.c)              return get(x.left,  key, d);
         else if (c > x.c)              return get(x.right, key, d);
@@ -80,6 +119,16 @@ public class TST<Value> {
         root = put(root, key, val, 0);
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     * @param      val   The value
+     * @param      d     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node<Value> put(Node<Value> x, String key, Value val, int d) {
         char c = key.charAt(d);
         if (x == null) {
