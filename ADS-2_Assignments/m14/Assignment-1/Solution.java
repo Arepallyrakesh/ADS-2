@@ -1,6 +1,15 @@
 import java.util.Scanner;
-import java.util.Arrays;
+
+/**
+ * Class for solution.
+ */
 public class Solution {
+
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		String[] words = loadWords();
 		TST tst = new TST();
@@ -17,6 +26,12 @@ public class Solution {
 		}
 		System.out.println(tst.keysWithPrefix(str));
 	}
+
+	/**
+	 * Loads words.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static String[] loadWords() {
 		In in = new In("/Files/dictionary-algs4.txt");
 		String[] words = in.readAllStrings();
