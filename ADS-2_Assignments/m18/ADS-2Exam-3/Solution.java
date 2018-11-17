@@ -6,7 +6,7 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    public Solution(){
+    private Solution() {
 
     }
 
@@ -31,7 +31,7 @@ public final class Solution {
             T9 t9 = new T9(loadDictionary("/Files/t9.csv"));
             while (scan.hasNextLine()) {
                 String prefix = scan.nextLine();
-                
+
                 for (String each : t9.getAllWords(prefix)) {
                     System.out.println(each);
                 }
@@ -89,26 +89,26 @@ public final class Solution {
     }
 
     // Don't modify this method.
-    public static String[] toReadFile(String file) {
+    public static String[] toReadFile(final String file) {
         In in = new In(file);
         return in.readAllStrings();
     }
 
     public static BinarySearchST<String, Integer>
-    loadDictionary(String file) {
+    loadDictionary(final String file) {
         BinarySearchST<String, Integer>  st = new
-        BinarySearchST<String, Integer>(); 
+        BinarySearchST<String, Integer>();
         // your code goes here
         String[] lines = toReadFile(file);
-        for (String line : lines){
+        for (String line : lines) {
             String[] s = line.split(" ");
-            for ( String words : s){
+            for ( String words : s) {
                 //System.out.println(words);
-                if(!st.contains(words.toLowerCase())) {
+                if (!st.contains(words.toLowerCase())) {
                     st.put(words.toLowerCase(), 1);
                 } else {
                     st.put(words.toLowerCase(),
-                        st.get(words.toLowerCase())+1);
+                        st.get(words.toLowerCase()) + 1);
                 }
             }
         }
@@ -123,24 +123,24 @@ class T9 {
         tst = new TST();
         for (String element : st.keys()) {
             tst.put(element, st.get(element));
-            
+
         }
     }
 
     // get all the prefixes that match with given prefix.
-    public Iterable<String> getAllWords(String prefix) {
+    public Iterable<String> getAllWords(final String prefix) {
         // your code goes here
         //System.out.println(prefix);
         return tst.keysWithPrefix(prefix);
     }
-        public Iterable<String> potentialWords(String t9Signature) {
+        public Iterable<String> potentialWords(final String t9Signature) {
         // your code goes here
         return null;
     }
 
     // return all possibilities(words), find top k with highest frequency.
     public Iterable<String> getSuggestions(Iterable
-        <String> words, int k) {
+        <String> words, final int k) {
         // your code goes here
         return null;
     }
