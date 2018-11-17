@@ -25,6 +25,7 @@ public class Solution {
 			T9 t9 = new T9(loadDictionary("/Files/t9.csv"));
 			while (scan.hasNextLine()) {
 				String prefix = scan.nextLine();
+				
 				for (String each : t9.getAllWords(prefix)) {
 					System.out.println(each);
 				}
@@ -109,18 +110,23 @@ public class Solution {
 }
 
 class T9 {
-
+	private TST tst;
 	public T9(BinarySearchST<String, Integer> st) {
 		// your code goes here
+		tst = new TST();
+		for (String element : st.keys()) {
+			tst.put(element, st.get(element));
+			
+		}
 	}
 
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
 		// your code goes here
-		return null;
+		//System.out.println(prefix);
+		return tst.keysWithPrefix(prefix);
 	}
-
-	public Iterable<String> potentialWords(String t9Signature) {
+		public Iterable<String> potentialWords(String t9Signature) {
 		// your code goes here
 		return null;
 	}
