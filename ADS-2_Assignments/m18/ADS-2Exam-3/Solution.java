@@ -3,6 +3,12 @@ import java.util.Scanner;
  * Class for solution.
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    public Solution(){
+
+    }
 
     // Don't modify this method.
     public static void main(final String[] args) {
@@ -12,7 +18,8 @@ public final class Solution {
         switch (cases) {
         case "loadDictionary":
             // input000.txt and output000.txt
-            BinarySearchST<String, Integer> hash = loadDictionary("/Files/t9.csv");
+            BinarySearchST<String, Integer> hash =
+            loadDictionary("/Files/t9.csv");
             while (scan.hasNextLine()) {
                 String key = scan.nextLine();
                 System.out.println(hash.get(key));
@@ -87,8 +94,10 @@ public final class Solution {
         return in.readAllStrings();
     }
 
-    public static BinarySearchST<String, Integer> loadDictionary(String file) {
-        BinarySearchST<String, Integer>  st = new BinarySearchST<String, Integer>(); 
+    public static BinarySearchST<String, Integer>
+    loadDictionary(String file) {
+        BinarySearchST<String, Integer>  st = new
+        BinarySearchST<String, Integer>(); 
         // your code goes here
         String[] lines = toReadFile(file);
         for (String line : lines){
@@ -98,7 +107,8 @@ public final class Solution {
                 if(!st.contains(words.toLowerCase())) {
                     st.put(words.toLowerCase(), 1);
                 } else {
-                    st.put(words.toLowerCase(), st.get(words.toLowerCase())+1);
+                    st.put(words.toLowerCase(),
+                        st.get(words.toLowerCase())+1);
                 }
             }
         }
@@ -129,7 +139,8 @@ class T9 {
     }
 
     // return all possibilities(words), find top k with highest frequency.
-    public Iterable<String> getSuggestions(Iterable<String> words, int k) {
+    public Iterable<String> getSuggestions(Iterable
+        <String> words, int k) {
         // your code goes here
         return null;
     }
