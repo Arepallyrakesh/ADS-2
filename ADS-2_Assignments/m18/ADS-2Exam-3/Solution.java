@@ -150,7 +150,7 @@ class T9 {
      *
      * @param      st    { parameter_description }
      */
-    public T9(final BinarySearchST<String, Integer> st) {
+    protected T9(final BinarySearchST<String, Integer> st) {
         // your code goes here
         tst = new TST();
         for (String element : st.keys()) {
@@ -174,7 +174,7 @@ class T9 {
         return tst.keysWithPrefix(prefix);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      t9Signature  The t 9 signature
      *
