@@ -12,7 +12,7 @@ public final class Solution {
 
     // Don't modify this method.
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -96,7 +96,7 @@ public final class Solution {
     // Don't modify this method.
 
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      file  The file
      *
@@ -122,7 +122,7 @@ public final class Solution {
         String[] lines = toReadFile(file);
         for (String line : lines) {
             String[] s = line.split(" ");
-            for ( String words : s) {
+            for (String words : s) {
                 //System.out.println(words);
                 if (!st.contains(words.toLowerCase())) {
                     st.put(words.toLowerCase(), 1);
@@ -144,13 +144,13 @@ class T9 {
      * TST.
      */
     private TST tst;
-    
+
     /**
      * Constructs the object.
      *
      * @param      st    { parameter_description }
      */
-    public T9(BinarySearchST<String, Integer> st) {
+    public T9(final BinarySearchST<String, Integer> st) {
         // your code goes here
         tst = new TST();
         for (String element : st.keys()) {
@@ -204,7 +204,7 @@ class T9 {
     // final output
     // Don't modify this method.
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      t9Signature  The t 9 signature
      * @param      k            { parameter_description }
@@ -215,3 +215,4 @@ class T9 {
         return getSuggestions(potentialWords(t9Signature), k);
     }
 }
+
