@@ -376,24 +376,16 @@ Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:14:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:92:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:97:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:105:18: '(' is followed by whitespace. [ParenPad]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:119: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:120:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:121:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:121:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:121:15: Parameter st should be final. [FinalParameters]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:131:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:136:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:142:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:142:44: Parameter words should be final. [FinalParameters]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:150:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:150:32: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:150:52: Parameter k should be final. [FinalParameters]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:14: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:98: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:125:18: '(' is followed by whitespace. [ParenPad]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:147: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:153:5: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:153:15: Parameter st should be final. [FinalParameters]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:176: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\Solution.java:206: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 9 errors.
 Starting audit...
 [ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\TST.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\ADS-2\ADS-2_Assignments\m18\ADS-2Exam-3\TST.java:46: Line is longer than 80 characters (found 84). [LineLength]

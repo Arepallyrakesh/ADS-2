@@ -11,6 +11,11 @@ public final class Solution {
     }
 
     // Don't modify this method.
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String cases = scan.nextLine();
@@ -89,11 +94,26 @@ public final class Solution {
     }
 
     // Don't modify this method.
+
+    /**
+     * { function_description }
+     *
+     * @param      file  The file
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static String[] toReadFile(final String file) {
         In in = new In(file);
         return in.readAllStrings();
     }
 
+    /**
+     * Loads a dictionary.
+     *
+     * @param      file  The file
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static BinarySearchST<String, Integer>
     loadDictionary(final String file) {
         BinarySearchST<String, Integer>  st = new
@@ -116,8 +136,20 @@ public final class Solution {
     }
 }
 
+/**
+ * Class for t 9.
+ */
 class T9 {
+    /**
+     * TST.
+     */
     private TST tst;
+    
+    /**
+     * Constructs the object.
+     *
+     * @param      st    { parameter_description }
+     */
     public T9(BinarySearchST<String, Integer> st) {
         // your code goes here
         tst = new TST();
@@ -128,18 +160,42 @@ class T9 {
     }
 
     // get all the prefixes that match with given prefix.
+
+    /**
+     * Gets all words.
+     *
+     * @param      prefix  The prefix
+     *
+     * @return     All words.
+     */
     public Iterable<String> getAllWords(final String prefix) {
         // your code goes here
         //System.out.println(prefix);
         return tst.keysWithPrefix(prefix);
     }
-        public Iterable<String> potentialWords(final String t9Signature) {
+    /**
+     * { function_description }
+     *
+     * @param      t9Signature  The t 9 signature
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Iterable<String> potentialWords(final String t9Signature) {
         // your code goes here
         return null;
     }
 
     // return all possibilities(words), find top k with highest frequency.
-    public Iterable<String> getSuggestions(Iterable
+
+    /**
+     * Gets the suggestions.
+     *
+     * @param      words  The words
+     * @param      k      { parameter_description }
+     *
+     * @return     The suggestions.
+     */
+    public Iterable<String> getSuggestions(final Iterable
         <String> words, final int k) {
         // your code goes here
         return null;
@@ -147,7 +203,15 @@ class T9 {
 
     // final output
     // Don't modify this method.
-    public Iterable<String> t9(String t9Signature, int k) {
+    /**
+     * { function_description }
+     *
+     * @param      t9Signature  The t 9 signature
+     * @param      k            { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Iterable<String> t9(final String t9Signature, final int k) {
         return getSuggestions(potentialWords(t9Signature), k);
     }
 }
