@@ -94,9 +94,12 @@ public class Solution {
 		for (String line : lines){
 			String[] s = line.split(" ");
 			for ( String words : s){
-				st.put(words.toLowerCase(), st.get(words.toLowerCase()));
-
-				
+				//System.out.println(words);
+				if(!st.contains(words.toLowerCase())) {
+					st.put(words.toLowerCase(), 1);
+				} else {
+					st.put(words.toLowerCase(), st.get(words.toLowerCase())+1);
+				}
 			}
 		}
 		return st;
