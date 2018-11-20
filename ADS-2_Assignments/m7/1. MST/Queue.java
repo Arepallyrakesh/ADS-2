@@ -41,11 +41,7 @@ public class Queue<Item> implements Iterable<Item> {
     private Node<Item> first;    // beginning of queue
     private Node<Item> last;     // end of queue
     private int n;               // number of elements on queue
-// public class Queue<Item> implements Iterable <Item>{
-//     private Node<Item> first;
-//     private Node<item> second;
-//     private int n;
-// }
+
     // helper linked list class
     private static class Node<Item> {
         private Item item;
@@ -64,12 +60,10 @@ public class Queue<Item> implements Iterable<Item> {
     /**
      * Returns true if this queue is empty.
      *
-     * @return {@code true} if this queue is empty; {@code false} otherwiseeue
+     * @return {@code true} if this queue is empty; {@code false} otherwise
      */
     public boolean isEmpty() {
-        if (first == null){
-            return true;
-        }return false;
+        return first == null;
     }
 
     /**

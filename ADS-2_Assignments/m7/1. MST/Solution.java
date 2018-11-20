@@ -7,25 +7,29 @@ final class Solution {
      * Constructs the object.
      */
     private Solution() {
-
     }
     /**
-     * { function_description }.
-     *
-     * @param      args  The arguments.
+     * main method to drive the program.
+     * @param      args  The arguments
+     * Time complexity for this method is O(N) where
+     * N is no of lines.
      */
     public static void main(final String[] args) {
-        Scanner input = new Scanner(System.in);
-        int vertices = Integer.parseInt(input.nextLine());
-        int edges = Integer.parseInt(input.nextLine());
-        EdgeWeightedGraph edgeW = new EdgeWeightedGraph(vertices);
-        for (int i = 0; i < edges; i++) {
-        String[] tokens = input.nextLine().split(" ");
-Edge edge = new Edge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]),
-Double.parseDouble(tokens[2]));
-        edgeW.addEdge(edge);
+        Scanner sc = new Scanner(System.in);
+        int vertices = Integer.parseInt(sc.nextLine());
+        int edges = Integer.parseInt(sc.nextLine());
+        EdgeWeightedGraph wg = new EdgeWeightedGraph(vertices);
+        while (sc.hasNextLine()) {
+            String[] line = sc.nextLine().split(" ");
+            Edge e = new Edge(Integer.parseInt(line[0]),
+                Integer.parseInt(line[1]), Double.parseDouble(line[2]));
+            wg.addEdge(e);
         }
-        KruskalMST kmst = new KruskalMST(edgeW);
-        System.out.format("%.5f", kmst.weight());
+        KruskalMST k = new KruskalMST(wg);
+        System.out.format("%.5f", k.weight());
     }
 }
+
+
+
+

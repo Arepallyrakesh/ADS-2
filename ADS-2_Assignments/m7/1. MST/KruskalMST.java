@@ -1,33 +1,36 @@
+/**
+ * Class for kruskal mst.
+ * Time complexity for this method is O(E log E).
+ */
 public class KruskalMST {
     /**
-     * float.
+     * epsilon value.
      */
-private static final double FLOATING_POINT_EXCEPTION= 1E-12;
-     /**
-      * weight.
-      */
+    private static final double FLOATING_POINT_EPSILON = 1E-12;
+    /**
+     * weight of MST.
+     */
     private double weight;
     /**
-     * queue.
-     */// weight of MST
+     * edges in MST.
+     */
     private Queue<Edge> mst = new Queue<Edge>();
-    // edges in MST
 
     /**
-     * Compute a minimum spanning tree (or forest).
-     *  of an edge-weighted graph.
-     * @param G the edge-weighted graph.
+     * Compute a minimum spanning tree (or forest)
+     * of an edge-weighted graph.
+     * @param g the edge-weighted graph
      */
-    public KruskalMST(final EdgeWeightedGraph gra) {
+    public KruskalMST(final EdgeWeightedGraph g) {
         // more efficient to build heap by passing array of edges
         MinPQ<Edge> pq = new MinPQ<Edge>();
-        for (Edge e : gra.edges()) {
+        for (Edge e : g.noedges()) {
             pq.insert(e);
         }
 
         // run greedy algorithm
-        UF uf = new UF(gra.V());
-        while (!pq.isEmpty() && mst.size() < gra.V() - 1) {
+        UF uf = new UF(g.vertices());
+        while (!pq.isEmpty() && mst.size() < g.vertices() - 1) {
             Edge e = pq.delMin();
             int v = e.either();
             int w = e.other(v);
@@ -37,9 +40,8 @@ private static final double FLOATING_POINT_EXCEPTION= 1E-12;
                 weight += e.weight();
             }
         }
-
         // check optimality conditions
-        assert check(gra);
+        assert check(g);
     }
 
     /**
@@ -52,38 +54,36 @@ private static final double FLOATING_POINT_EXCEPTION= 1E-12;
     }
 
     /**
-     * Returns the sum of the edge weights.
-     *  in a minimum spanning tree (or forest).
-     * @return the sum of the edge.
-     *  weights in a minimum spanning tree (or forest).
+     * Returns the sum of the edge weights in a
+     * minimum spanning tree (or forest).
+     * @return the sum of the edge weights in a
+     * minimum spanning tree (or forest)
+     * Time complexity for this method is O(1).
      */
     public double weight() {
         return weight;
     }
-
-
     /**
-     * check.
-     *
-     * @param      gra   The gra
-     *
-     * @return     { true or false }
+     * check optimality conditions (takes time proportional to E V lg* V).
+     * @param      g     graph.
+     * @return     true or false.
      */
-    private boolean check(EdgeWeightedGraph gra) {
+    private boolean check(final EdgeWeightedGraph g) {
 
         // check total weight
         double total = 0.0;
         for (Edge e : edges()) {
             total += e.weight();
         }
-        if (Math.abs(total - weight()) >
-            FLOATING_POINT_EXCEPTION) {
-
+        if (Math.abs(total - weight()) > FLOATING_POINT_EPSILON) {
+            System.err.printf(
+                "Weight of edges does not equal weight(): %f vs. %f\n",
+                              total, weight());
             return false;
         }
 
         // check that it is acyclic
-        UF uf = new UF(gra.V());
+        UF uf = new UF(g.vertices());
         for (Edge e : edges()) {
             int v = e.either(), w = e.other(v);
             if (uf.connected(v, w)) {
@@ -94,21 +94,17 @@ private static final double FLOATING_POINT_EXCEPTION= 1E-12;
         }
 
         // check that it is a spanning forest
-        for (Edge e : gra.edges()) {
+        for (Edge e : g.noedges()) {
             int v = e.either(), w = e.other(v);
             if (!uf.connected(v, w)) {
-                System.err.println
-                ("Not a spanning forest");
+                System.err.println("Not a spanning forest");
                 return false;
             }
         }
-
-        // // check that it is a minimal spanning.
-        // forest (cut optimality conditions)
         for (Edge e : edges()) {
 
             // all edges in MST except e
-            uf = new UF(gra.V());
+            uf = new UF(g.vertices());
             for (Edge f : mst) {
                 int x = f.either(), y = f.other(x);
                 if (f != e) {
@@ -117,12 +113,12 @@ private static final double FLOATING_POINT_EXCEPTION= 1E-12;
             }
 
             // check that e is min weight edge in crossing cut
-            for (Edge f : gra.edges()) {
+            for (Edge f : g.noedges()) {
                 int x = f.either(), y = f.other(x);
                 if (!uf.connected(x, y)) {
                     if (f.weight() < e.weight()) {
-                        System.err.println("Edge " +
-                         f + " violates cut optimality conditions");
+                        System.err.println("Edge " + f
+                         + " violates cut optimality conditions");
                         return false;
                     }
                 }
@@ -133,3 +129,6 @@ private static final double FLOATING_POINT_EXCEPTION= 1E-12;
         return true;
     }
 }
+
+
+

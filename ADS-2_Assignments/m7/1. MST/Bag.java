@@ -75,9 +75,7 @@ public class Bag<Item> implements Iterable<Item> {
      *         {@code false} otherwise
      */
     public boolean isEmpty() {
-        if (first == null){
-            return true;
-        }return false;
+        return first == null;
     }
 
     /**
@@ -148,4 +146,5 @@ public class Bag<Item> implements Iterable<Item> {
             StdOut.println(s);
         }
     }*/
+
 }
