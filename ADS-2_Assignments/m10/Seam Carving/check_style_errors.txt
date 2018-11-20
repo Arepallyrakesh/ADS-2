@@ -1,15 +1,6 @@
 Starting audit...
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\Picture.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\SeamCarver.java:101: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\Solution.java:36: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\ADS-2\ADS-2_Assignments\m10\Seam Carving\Solution.java:68: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 3 errors.

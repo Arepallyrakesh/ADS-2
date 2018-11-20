@@ -98,7 +98,7 @@ public class SeamCarver {
 
     /**.
      * { function_description }
-     * 
+     *
      * @param      one   One
      * @param      two   Two
      *
@@ -314,3 +314,4 @@ public class SeamCarver {
         return true;
     }
 }
+

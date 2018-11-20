@@ -33,7 +33,7 @@ final class Solution {
     }
     /**
      * printSeam method.
-     * Complexity of this method is O(height*width) 
+     * Complexity of this method is O(height*width)
      * @param carver seamCarver.
      * @param seam int[].
      * @param direction boolean.
@@ -65,7 +65,7 @@ final class Solution {
     }
 /**
  * main method.
- * Complexity of main method is O(n) : where n is 
+ * Complexity of main method is O(n) : where n is
  * the number of cases
  * @param args Strings.
  */
@@ -161,3 +161,4 @@ final class Solution {
         }
     }
 }
+
