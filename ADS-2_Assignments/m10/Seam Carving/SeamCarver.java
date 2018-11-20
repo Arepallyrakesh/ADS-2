@@ -27,8 +27,8 @@ public class SeamCarver {
 
     // current picture
     /**.
-     * { function_description }
-     *
+     * { function_description }.
+     *Complexity of this method is O(1)
      * @return     { description_of_the_return_value }
      */
     public Picture picture() {
@@ -37,6 +37,7 @@ public class SeamCarver {
 
     // width of current picture
     /**.
+     * Complexity of this method is O(1).
      * { function_description }
      *
      * @return     { description_of_the_return_value }
@@ -48,7 +49,7 @@ public class SeamCarver {
     // height of current picture
     /**.
      * { function_description }
-     *
+     *Complexity of this method is O(1)
      * @return     { description_of_the_return_value }
      */
     public int height() {
@@ -57,6 +58,7 @@ public class SeamCarver {
 
     // energy of pixel at column x and row y
     /**.
+     * Complexity of this method is O(x*y).
      * { function_description }
      *
      * @param      x     { parameter_description }
@@ -79,7 +81,7 @@ public class SeamCarver {
     // energy of pixel at column x and row y not on boarder
     /**.
      * { function_description }
-     *
+     * Complexity of this method is O(x*y).
      * @param      x     { parameter_description }
      * @param      y     { parameter_description }
      *
@@ -96,7 +98,7 @@ public class SeamCarver {
 
     /**.
      * { function_description }
-     *
+     * 
      * @param      one   One
      * @param      two   Two
      *

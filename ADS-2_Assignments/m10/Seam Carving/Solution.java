@@ -12,6 +12,7 @@ final class Solution {
     }
     /**
      * printEnergies.
+     * Complexity of the function is O(height*width).
      * @param fileName String.
      **/
     public static void printEnergies(final String fileName) {
@@ -32,6 +33,7 @@ final class Solution {
     }
     /**
      * printSeam method.
+     * Complexity of this method is O(height*width) 
      * @param carver seamCarver.
      * @param seam int[].
      * @param direction boolean.
@@ -63,6 +65,8 @@ final class Solution {
     }
 /**
  * main method.
+ * Complexity of main method is O(n) : where n is 
+ * the number of cases
  * @param args Strings.
  */
     public static void main(final String[] args) {
