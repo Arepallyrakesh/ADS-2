@@ -81,7 +81,7 @@ class GraphMatrix {
 
     /**
      * display method.
-     * The complexity of the following method is O(E).
+     * Time complexity is O(N^2).
      * where V is the no.of vertices
      * As the method executes for the iterations of two for loops
      * upto their end values.

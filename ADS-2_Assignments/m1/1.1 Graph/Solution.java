@@ -10,7 +10,7 @@ public final class Solution {
     }
     /**
      * main method.
-     *
+     *Time complexity is O(N)
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
