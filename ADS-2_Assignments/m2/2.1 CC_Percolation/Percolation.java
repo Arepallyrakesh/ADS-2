@@ -78,7 +78,7 @@ class Percolation {
     }
     /**
      * method that opens the blocked site.
-     *
+     * Time Complexity is O(1)
      * @param      row     The row
      * @param      col  The column
      */
@@ -132,7 +132,7 @@ class Percolation {
     }
     /**
      * method to check whether there is a flow.
-     *
+     * Time Complexity is O(1)
      * @return boolean
      */
     public boolean percolates() {

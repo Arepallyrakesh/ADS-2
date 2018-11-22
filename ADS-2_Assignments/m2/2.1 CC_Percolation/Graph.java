@@ -42,7 +42,7 @@ public class Graph {
 
     /**
      * Returns the number of vertices in this graph.
-     *
+     * Time complexity is O(1)
      * @return the number of vertices in this graph
      */
     public int v() {
@@ -51,7 +51,7 @@ public class Graph {
 
     /**
      * Returns the number of edges in this graph.
-     *
+     * Time complexity is O(1)
      * @return the number of edges in this graph
      */
     public int e() {
@@ -72,7 +72,7 @@ public class Graph {
 
     /**
      * Adds the undirected edge v-w to this graph.
-     *
+     * Time complexity is O(1)
      * @param  v one vertex in the edge
      * @param  w the other vertex in the edge
      * @throws IllegalArgumentException unless both
@@ -91,7 +91,7 @@ public class Graph {
      *
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
-     *
+     * Time complexity is O(1).
      * @return     True if has edge, False otherwise.
      */
     public boolean hasEdge(final int v, final int w) {
@@ -105,7 +105,7 @@ public class Graph {
 
     /**
      * Returns the vertices adjacent to vertex {@code v}.
-     *
+     * Time Complexity is 1
      * @param  v the vertex
      * @return the vertices adjacent to vertex {@code v}, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -117,7 +117,7 @@ public class Graph {
 
     /**
      * Returns the degree of vertex {@code v}.
-     *
+     * Time complexity is O(N ^ 2).
      * @param  v the vertex
      * @return the degree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}

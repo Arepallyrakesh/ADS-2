@@ -39,7 +39,7 @@ public class CC {
 
     /**
      * { function_description }.
-     *
+     * Time Complexity is 2E + V
      * @param      g     { parameter_description }.
      * @param      v     { parameter_description }.
      */
@@ -57,7 +57,7 @@ public class CC {
     /**
      * Returns the component id of the connected component containing vertex
      * {@code v}.
-     *
+     * Time Complexity is O(1)
      * @param  v the vertex
      * @return the component id of the connected component containing
      * vertex {@code v}
@@ -72,7 +72,7 @@ public class CC {
      * Returns the number of vertices in the connected component containing
      * vertex
      * {@code v}.
-     *
+     * Time Complexity is O(1)
      * @param  v the vertex
      * @return the number of vertices in the connected component containing
      * vertex {@code v}
@@ -85,7 +85,7 @@ public class CC {
 
     /**
      * Returns the number of connected components in the graph {@code g}.
-     *
+     * Time Complexity is O(1)
      * @return the number of connected components in the graph {@code g}
      */
     public int count() {
@@ -95,7 +95,7 @@ public class CC {
     /**
      * Returns true if vertices {@code v} and {@code w} are in the same
      * connected component.
-     *
+     * Time Complexity is O(1)
      * @param  v one vertex
      * @param  w the other vertex
      * @return {@code true} if vertices {@code v} and {@code w} are in the same
@@ -112,7 +112,7 @@ public class CC {
     /**
      * Returns true if vertices {@code v} and {@code w} are in the same
      * connected component.
-     *
+     * Time Complexity is O(1)
      * @param  v one vertex
      * @param  w the other vertex
      * @return {@code true} if vertices {@code v} and {@code w} are in the same
@@ -130,7 +130,7 @@ public class CC {
 
     /**
      * { function_description }.
-     *
+     * Time Complexity is O(1)
      * @param      v     { parameter_description }.
      */
     private void validateVertex(final int v) {

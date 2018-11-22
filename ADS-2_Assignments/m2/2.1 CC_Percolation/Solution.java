@@ -11,7 +11,7 @@ public final class Solution {
     }
     /**
      * main method to read input.
-     *
+     * Time complexity is O(N)
      * @param args String
      */
     public static void main(final String[] args) {
