@@ -90,7 +90,7 @@ public class EdgeWeightedGraph {
 
     /**
      * Returns the number of vertices in this edge-weighted graph.
-     *
+     * Time complexity is 1
      * @return the number of vertices in this edge-weighted graph
      */
     public int V() {
@@ -99,7 +99,7 @@ public class EdgeWeightedGraph {
 
     /**
      * Returns the number of edges in this edge-weighted graph.
-     *
+     * Time complexity is 1
      * @return the number of edges in this edge-weighted graph
      */
     public int E() {
@@ -114,7 +114,7 @@ public class EdgeWeightedGraph {
 
     /**
      * Adds the undirected edge {@code e} to this edge-weighted graph.
-     *
+     * Time complexity is 1
      * @param  e the edge
      * @throws IllegalArgumentException unless both endpoints are between {@code 0} and {@code V-1}
      */
@@ -142,7 +142,7 @@ public class EdgeWeightedGraph {
 
     /**
      * Returns the degree of vertex {@code v}.
-     *
+     * Time complexity is 1
      * @param  v the vertex
      * @return the degree of vertex {@code v}               
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -156,7 +156,7 @@ public class EdgeWeightedGraph {
      * Returns all edges in this edge-weighted graph.
      * To iterate over the edges in this edge-weighted graph, use foreach notation:
      * {@code for (Edge e : G.edges())}.
-     *
+     * Time complexity is 1
      * @return all edges in this edge-weighted graph, as an iterable
      */
     public Iterable<Edge> edges() {

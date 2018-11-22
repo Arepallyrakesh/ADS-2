@@ -1,10 +1,15 @@
 import java.util.*;
 public class Solution {
 
+	Solution(){
+
+	}
+	// Time complexity is O(N).
 	public static void main(String[] args) {
 		// Self loops are not allowed...
 		// Parallel Edges are allowed...
 		// Take the Graph input here...
+		// 
 		Scanner sc = new Scanner(System.in);
 		int vertices = Integer.parseInt(sc.nextLine());
 		int lines = Integer.parseInt(sc.nextLine());

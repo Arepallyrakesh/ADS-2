@@ -41,6 +41,7 @@ public class DijkstraUndirectedSP {
     }
 
     // relax edge e and update pq if changed
+    // Time complexity is O(1)
     private void relax(Edge e, int v) {
         int w = e.other(v);
         if (distTo[w] > distTo[v] + e.weight()) {
@@ -54,7 +55,7 @@ public class DijkstraUndirectedSP {
     /**
      * Returns the length of a shortest path between the source vertex {@code s} and
      * vertex {@code v}.
-     *
+     *Time complexity is O(1)
      * @param  v the destination vertex
      * @return the length of a shortest path between the source vertex {@code s} and
      *         the vertex {@code v}; {@code Double.POSITIVE_INFINITY} if no such path
@@ -73,6 +74,7 @@ public class DijkstraUndirectedSP {
      * @return {@code true} if there is a path between the source vertex
      *         {@code s} to vertex {@code v}; {@code false} otherwise
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * Time complexity is O(1)
      */
     public boolean hasPathTo(int v) {
         validateVertex(v);
