@@ -8,114 +8,109 @@
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
+/**graphimplementation.**/
 /**
- * Class for bag.
- *
- * @param      <Item>  The item
+ * @param <Item> value
  */
 public class Bag<Item> implements Iterable<Item> {
     /**
-     * number of elements in bag.
+     * variable.
      */
-    private int n;
+    private int size;
     /**
-     * beginning of bag.
+     * variable.
      */
     private Node first;
-
-    /**
-     * Class for node.
-     */
+    /**graphimplementation.**/
     private class Node {
-        /**
-         * { var_description }.
-         */
+    /**
+     * variable.
+     */
         private Item item;
-        /**
-         * { var_description }.
-         */
+    /**
+     * variable.
+     */
         private Node next;
     }
-
-    /**
-      * Create an empty stack.
-      */
+   /**
+     * Create an empty stack.
+     */
     public Bag() {
         first = null;
-        n = 0;
+        size = 0;
     }
 
-    /**
-      * Is the BAG empty?
-      *
-      * @return     True if empty, False otherwise.
-      */
+   /**
+     * Is the BAG empty?
+     * @return value
+     * Time complexity is O(1)
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
-    /**
-      * Return the number of items in the bag.
-      *
-      * @return     { description_of_the_return_value }.
-      */
+   /**
+     * Return the number of items in the bag.
+     * Time complexity is O(1)
+     * @return value
+     */
     public int size() {
-        return n;
+        return size;
     }
 
-    /**
-      * Add the item to the bag.
-      *
-      * @param      item  The item.
-      */
+   /**
+     * Add the item to the bag.
+     * Time complexity is O(1)
+     * @param item value
+     */
     public void add(final Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        n++;
+        size++;
     }
 
-    /**
-     * { function_description }.
-     *
-     * @return     { description_of_the_return_value }.
+
+   /**
+     * Return an iterator that iterates over the items in the bag.
+     * Time complexity is O(N)
+     * @return value
      */
-    public Iterator<Item> iterator() {
+    public Iterator<Item> iterator()  {
         return new ListIterator();
     }
 
-    /**
-     * Class for list iterator.
-     */
+    // an iterator, doesn't implement remove() since it's optional
+    /**graphimplementation.**/
     private class ListIterator implements Iterator<Item> {
-        /**
-         * current Node.
-         */
+    /**
+     * variable.
+     */
         private Node current = first;
-
         /**
-         * Determines if it has next.
-         *
-         * @return     True if has next, False otherwise.
+         * @brief [brief description]
+         * @details [long description]
+         * Time complexity is O(1)
+         * @return value
          */
-        public boolean hasNext() {
+        public boolean hasNext()  {
             return current != null;
         }
-
         /**
-         * { function_description }.
+         * @brief [brief description]
+         * @details [long description]
+         * Time complexity is O(1)
          */
-        public void remove() {
+        public void remove()      {
             throw new UnsupportedOperationException();
-        }
-
-        /**
-         * { function_description }.
-         *
-         * @return     { description_of_the_return_value }.
-         */
+         }
+         /**
+           * @brief [brief description]
+          * @details [long description]
+          * Time complexity is O(1)
+          * @return value
+          */
         public Item next() {
             if (!hasNext()) {
                 throw new NoSuchElementException();
@@ -125,6 +120,5 @@ public class Bag<Item> implements Iterable<Item> {
             return item;
         }
     }
+
 }
-
-

@@ -1,93 +1,164 @@
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+/**hasacycle.**/
 /**
- * List of Stack.
- *
- * @param      <Item>  The item
+ * @param <Item> value
  */
-public class Stack<Item> {
+public class Stack<Item> implements Iterable<Item> {
     /**
-     * {top of stack}.
+     * variable.
      */
-    private Node<Item> first;
+    private int num;
     /**
-     * {size of the stack}.
+     * variable.
      */
-    private int n;
-
-    /**
-     * Class for node.
-     *
-     * @param      <Item>  The item
+    private Node first;
+    /**hasacycle.**/
+    private class Node {
+     /**
+     * variable.
      */
-    private static class Node<Item> {
-        /**
-         * {Item}.
-         */
         private Item item;
-        /**
-         * {Next of type node}.
-         */
-        private Node<Item> next;
-    }
-
     /**
-     * Initializes an empty stack.
+     * variable.
      */
-    Stack() {
-        first = null;
-        n = 0;
+        private Node next;
     }
 
-    /**
-     * Returns true if this stack is empty.
-     *
-     * @return true if this stack is empty; false otherwise
+   /**
+     * Create an empty stack.
+     */
+    public Stack() {
+        first = null;
+        num = 0;
+    }
+
+   /**
+     * Is the stack empty?
+     * Time complexity is O(1)
+     * @return value
      */
     public boolean isEmpty() {
         return first == null;
     }
 
-    /**
-     * Returns the number of items in this stack.
-     *
-     * @return the number of items in this stack
+   /**
+     * Return the number of items in the stack.
+     * Time complexity is O(1)
+     * @return value
      */
     public int size() {
-        return n;
+        return num;
     }
 
-    /**
-     * Adds the item to this stack.
-     *
-     * @param  item the item to add
+   /**
+     * Add the item to the stack.
+     * Time complexity is O(1)
+     * @param item value
      */
     public void push(final Item item) {
-        Node<Item> oldfirst = first;
-        first = new Node<Item>();
+        Node oldfirst = first;
+        first = new Node();
         first.item = item;
         first.next = oldfirst;
-        n++;
+        num++;
     }
 
-    /**
-     * Removes and returns the item most recently added to this stack.
-     *
-     * @return the item most recently added
-     *
+   /**
+     * @return value
+     * Time complexity is O(1)
      */
     public Item pop() {
-        Item item = first.item;
-        first = first.next;
-        n--;
-        return item;
+        if (isEmpty()) {
+            throw new RuntimeException("Stack underflow");
+        }
+        Item item = first.item;        // save item to return
+        first = first.next;            // delete first node
+        num--;
+        return item;                   // return the saved item
     }
 
-    /**
-     * Returns (but does not remove) the item most recently added to this stack.
-     *
-     * @return the item most recently added to this stack
-     *
+
+   /**
+     * @return value
+     * Time complexity is O(1)
      */
     public Item peek() {
+        if (isEmpty()) {
+    throw new RuntimeException("Stack underflow");
+    }
         return first.item;
     }
+
+   /**
+     * Return string representation.
+     * Time complexity is O(N)
+     * @return value
+     */
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        for (Item item : this) {
+            s.append(item + " ");
+        }
+        return s.toString();
+    }
+
+
+   /**
+     * @return value
+     * Time complexity is O(N)
+     */
+    public Iterator<Item> iterator() {
+        return new ListIterator();
+    }
+
+    /**hasacycle.**/
+    private class ListIterator implements Iterator<Item> {
+        /**.
+         * variable.
+         */
+        private Node current = first;
+        /**
+         * @return value
+         * Time complexity is O(1)
+         */
+        public boolean hasNext() {
+            return current != null;
+             }
+             /**
+              * @brief [brief description]
+              * @details [long description]
+              * Time complexity is O(1)
+              */
+        public void remove() {
+        throw new UnsupportedOperationException();
+             }
+            /**
+             * @return value
+             * Time complexity is O(1)
+             */
+        public Item next() {
+            if (!hasNext()) {
+             throw new NoSuchElementException();
+        }
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
+    }
+
+
+   /**
+     * A test client.
+     */
+/*    public static void main(String[] args) {
+        Stack<String> s = new Stack<String>();
+        while (!StdIn.isEmpty()) {
+            String item = StdIn.readString();
+            if (!item.equals("-")) s.push(item);
+            else if (!s.isEmpty()) StdOut.print(s.pop() + " ");
+        }
+        StdOut.println("(" + s.size() + " left on stack)");
+    }*/
 }
+

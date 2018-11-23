@@ -1,30 +1,34 @@
 import java.util.Scanner;
-/**
- *client class.
- */
-public final class Solution {
+/**HASACYCLE.**/
+final class Solution {
     /**
-     * Constructs the object.
+     * @brief [brief description]
+     * @details [long description]
      */
-    private Solution() {
-        //unused constructor.
-    }
+    private Solution() { }
     /**
-     * main method.
-     *
-     * @param      args  The arguments
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(N)
+     * @param args value
      */
     public static void main(final String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int vertices = Integer.parseInt(sc.nextLine());
-        int edges = Integer.parseInt(sc.nextLine());
-        Digraph digraph = new Digraph(vertices);
-        while (sc.hasNext()) {
-            String[] input = sc.nextLine().split(" ");
-            digraph.addEdge(Integer.parseInt(input[0]),
-                            Integer.parseInt(input[1]));
+        Scanner s = new Scanner(System.in);
+        int num1 = Integer.parseInt(s.nextLine());
+        int num2 = Integer.parseInt(s.nextLine());
+        DiGraph dg = new DiGraph(num1);
+
+        while (s.hasNextLine()) {
+            String[] tokens = s.nextLine().split(" ");
+            dg.addEdge(Integer.parseInt(tokens[0]),
+                Integer.parseInt(tokens[1]));
         }
-        DirectedCycle directedcycle = new DirectedCycle(digraph);
-        System.out.println(directedcycle);
+            DirectedCycle cycle = new DirectedCycle(dg);
+        if (cycle.hasCycle()) {
+            System.out.println("Cycle exists.");
+
+        } else {
+            System.out.println("Cycle doesn't exists.");
+        }
     }
 }

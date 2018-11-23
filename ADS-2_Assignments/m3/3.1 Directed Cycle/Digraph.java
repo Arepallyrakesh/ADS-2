@@ -1,124 +1,135 @@
-/**
- * Class for digraph.
- */
-public class Digraph {
+/**graphimplementation.**/
+public class DiGraph {
     /**
-     * {number of vertices in this digraph}.
+     * variable.
      */
     private final int vertices;
     /**
-     * {number of edges in this digraph}.
+     * variable.
      */
     private int edges;
     /**
-     * {adj[v] = adjacency list for vertex v}.
+     * variable.
+     */
+    private int size;
+    /**
+     * variable.
      */
     private Bag<Integer>[] adj;
     /**
-     * {indegree[v] = indegree of vertex v}.
+     * variable.
      */
-    private int[] indegree;
-
+    private String[] vertex;
     /**
-     * Initializes an empty digraph with <em>v</em> vertices.
-     *
-     * @param  v the number of vertices
-     * @throws IllegalArgumentException if {@code v < 0}
+     * @brief [brief description]
+     * @details [long description]
+     * @param vert value.
      */
-    public Digraph(final int v) {
-        if (v < 0) {
-            throw new IllegalArgumentException(
-                "Number of vertices in a Digraph must be nonnegative");
-        }
-        this.vertices = v;
-        this.edges = 0;
-        indegree = new int[vertices];
-        adj = (Bag<Integer>[]) new Bag[vertices];
-        for (int i = 0; i < vertices; i++) {
-            adj[i] = new Bag<Integer>();
-        }
+     public DiGraph(final int vert) {
+        if (vert < 0) {
+        throw new IllegalArgumentException(
+            "Number of vertices must be nonnegative");
     }
+        this.vertices = vert;
+        this.edges = 0;
+        adj = (Bag<Integer>[]) new Bag[vert];
+        vertex = new String[vert];
+        for (int v = 0; v < vert; v++) {
+            adj[v] = new Bag<Integer>();
+        }
+        size = 0;
 
+    }
     /**
-     * Returns the number of vertices in this digraph.
-     *
-     * @return the number of vertices in this digraph
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(1)
+     * @return value
      */
-    public int vertices() {
+     public int vertex() {
         return vertices;
     }
-
     /**
-     * Returns the number of edges in this digraph.
-     *
-     * @return the number of edges in this digraph
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(1)
+     * @return value
      */
-    public int edges() {
+     public int edge() {
         return edges;
     }
-
     /**
-     * Adds the directed edge v→w to this digraph.
-     *
-     * @param  v the tail vertex
-     * @param  w the head vertex
-     * @throws IllegalArgumentException unless both
-     * {@code 0 <= v < V} and {@code 0 <= w < V}
-     */
-    public void addEdge(final int v, final int w) {
-        adj[v].add(w);
-        indegree[w]++;
-        edges++;
-    }
-
-    /**
-     * Returns the vertices adjacent from vertex {@code v} in this digraph.
-     *
-     * @param  v the vertex
-     * @return the vertices adjacent from vertex {@code v}
-     * in this digraph, as an iterable
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * @param v value
+     * @return value
      */
     public Iterable<Integer> adj(final int v) {
+        //validateVertex(v);
         return adj[v];
     }
-
     /**
-     * Returns the number of directed edges incident from vertex {@code v}.
-     * This is known as the <em>outdegree</em> of vertex {@code v}.
-     *
-     * @param  v the vertex
-     * @return the outdegree of vertex {@code v}
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(N ^ 2)
+     * @return value
      */
-    public int outdegree(final int v) {
-        return adj[v].size();
-    }
-
-    /**
-     * Returns the number of directed edges incident to vertex {@code v}.
-     * This is known as the <em>indegree</em> of vertex {@code v}.
-     *
-     * @param  v the vertex
-     * @return the indegree of vertex {@code v}
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
-     */
-    public int indegree(final int v) {
-        return indegree[v];
-    }
-
-    /**
-     * Returns the reverse of the digraph.
-     *
-     * @return the reverse of the digraph
-     */
-    public Digraph reverse() {
-        Digraph reverse = new Digraph(vertices);
-        for (int j = 0; j < vertices; j++) {
-            for (int w : adj(j)) {
-                reverse.addEdge(w, j);
+    public DiGraph reverse() {
+        DiGraph reverse = new DiGraph(this.vertex());
+        for (int v = 0; v < this.vertex(); v++) {
+            for (int w : adj(v)) {
+                reverse.addEdge(w, v);
             }
         }
         return reverse;
     }
+
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(1)
+     * @param v value
+     * @param w value
+     */
+    public void addEdge(final int v, final int w) {
+
+        // validateVertex(v);
+        // validateVertex(w);
+    // if (v == w) {
+    //     System.out.println(vertices + " vertices, " + edges + " edges");
+    //     System.out.println("No edges");
+    //     return;
+    // }
+        edges++;
+        adj[v].add(w);
+       //adj[w].add(v);
+    }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(1)
+     * @param s value
+     */
+    public void addvertices(final String s) {
+        vertex[size++] = s;
+
+    }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * Time complexity is O(N ^ 2)
+     * @return value
+     */
+     public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append(vertices + " vertices, " + edges + " edges" + "\n");
+        for (int v = 0; v < vertices; v++) {
+            s.append(vertex[v] + ": ");
+            for (int w : adj[v]) {
+                s.append(vertex[w] + " ");
+                //s.substring(0,s.length() - 1);
+            }
+            s.append("\n");
+        }
+        return s.toString();
+    }
+
 }
