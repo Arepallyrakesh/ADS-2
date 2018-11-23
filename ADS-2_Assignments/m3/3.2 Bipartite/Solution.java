@@ -1,31 +1,36 @@
 import java.util.Scanner;
-/**
- * client class.
+/**.
+ * { item_description }
  */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
-        //unused constructor.
+        /**.
+         * { item_description }
+         */
     }
-    /**
-     * client method.
+    /**.
+     * { function_description }
      *
      * @param      args  The arguments
      */
+    // time complexity for the main method is O(N).
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int vertices = Integer.parseInt(sc.nextLine());
-        int edges = Integer.parseInt(sc.nextLine());
-        Graph graph = new Graph(vertices);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        sc.nextLine();
+        Graph g = new Graph(n);
         while (sc.hasNext()) {
-            String[] input = sc.nextLine().split(" ");
-            graph.addEdge(Integer.parseInt(input[0]),
-                          Integer.parseInt(input[1]));
+            String line = sc.nextLine();
+            String[] tokens = line.split(" ");
+            g.addEdge(Integer.parseInt(tokens[0]),
+                         Integer.parseInt(tokens[1]));
         }
-        DirectedCycle directedcycle = new DirectedCycle(graph);
-        if (directedcycle.isBipartite()) {
+        DirectedCycle dc = new DirectedCycle(g);
+        if (dc.isBipartite()) {
             System.out.println("Graph is bipartite");
         } else {
             System.out.println("Graph is not a bipartite");
