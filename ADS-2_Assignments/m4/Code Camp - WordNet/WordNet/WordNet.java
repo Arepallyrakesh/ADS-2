@@ -1,13 +1,34 @@
 import java.util.ArrayList;
 
+/**
+ * Class for word net.
+ */
 public class WordNet {
-
+    /**.
+     * { var_description }.
+     */
     private SAP sap;
+    /**.
+     * { var_description }.
+     */
     private Digraph graph;
+    /**.
+     * { var_description }.
+     */
     private ArrayList<String> alist;
+    /**.
+     * { var_description }.
+     */
     private LinearProbingHashST<String, Bag<Integer>> ht;
 
     // constructor takes the name of the two input files
+
+    /**
+     * Constructs the object.
+     *
+     * @param      synsets    The synsets
+     * @param      hypernyms  The hypernyms
+     */
     public WordNet(String synsets, String hypernyms) {
         ht = new LinearProbingHashST<String, Bag<Integer>>();
         alist = new ArrayList<String>();
@@ -15,6 +36,13 @@ public class WordNet {
         graph = buildGraph(hypernyms, V);
     }
 
+    /**
+     * { function_description }.
+     *
+     * @param      synsets  The synsets
+     *
+     * @return     { description_of_the_return_value }
+     */
     private int processSynsets(String synsets) {
         In in = new In(synsets);
         int count = 0;

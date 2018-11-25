@@ -1,0 +1,5 @@
+[master 1c16302] "ads2_m4_a1_1: 15/15 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Arepallyrakesh/ADS-2.git
+   4ed7108..1c16302  master -> master

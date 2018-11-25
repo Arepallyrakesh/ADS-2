@@ -1,7 +1,24 @@
 import java.util.Scanner;
 
+/**
+ * Class for solution.
+ */
 public class Solution {
+
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+
+	}
+
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
+
 		Scanner scan = new Scanner(System.in);
 		String synsetsFileName = scan.nextLine();
 		String hypernymFileName = scan.nextLine();

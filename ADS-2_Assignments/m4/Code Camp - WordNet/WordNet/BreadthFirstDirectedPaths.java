@@ -87,6 +87,13 @@ public class BreadthFirstDirectedPaths {
     }
 
     // BFS from single source
+
+    /**
+     * { function_description }.
+     * time complexity is 1 in avg case.
+     * @param      G     { parameter_description }
+     * @param      s     { parameter_description }
+     */
     private void bfs(Digraph G, int s) {
         Queue<Integer> q = new Queue<Integer>();
         marked[s] = true;
@@ -152,6 +159,7 @@ public class BreadthFirstDirectedPaths {
     /**
      * Returns a shortest path from {@code s} (or sources) to {@code v}, or
      * {@code null} if no such path.
+     * time complexity is O(N).
      * @param v the vertex
      * @return the sequence of vertices on a shortest path, as an Iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
@@ -169,6 +177,11 @@ public class BreadthFirstDirectedPaths {
     }
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    /**.
+     * { function_description }
+     * time complexity is 1 in avg case
+     * @param      v     { parameter_description }
+     */
     private void validateVertex(int v) {
         int V = marked.length;
         if (v < 0 || v >= V)
@@ -176,6 +189,11 @@ public class BreadthFirstDirectedPaths {
     }
 
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    /**.
+     * { function_description }
+     * time complexity is O(N).
+     * @param      vertices  The vertices
+     */
     private void validateVertices(Iterable<Integer> vertices) {
         if (vertices == null) {
             throw new IllegalArgumentException("argument is null");

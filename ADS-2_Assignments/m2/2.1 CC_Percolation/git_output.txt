@@ -1,0 +1,6 @@
+[master 249d9dd] "ads2_m2_a1_1: 24/24 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 7 files changed, 23 insertions(+), 22 deletions(-)
+ rewrite ADS-2_Assignments/m2/2.1 CC_Percolation/result/score.json (96%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/Arepallyrakesh/ADS-2.git
+   e55bf7d..249d9dd  master -> master
